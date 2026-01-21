@@ -10,29 +10,27 @@ Working on Next-Generation Firewall Systems in the Applied Networking Technologi
 
 > Primary project 1: NGFW System Understanding & Prototype Planning
 
-* Joined a research-heavy team working on NGFW technology that relied on a large, complex C-based production codebase with limited shared understanding.
-* Spent several weeks performing deep code review, debugging, and analysis to build a holistic understanding of the system, documenting key components, execution flows, and dependencies.
-* Became the technical point of contact for the research team, answering detailed questions, presenting internal walkthroughs, and clarifying ambiguities with the dev team.
-* Used this understanding to help design the high-level architecture of a new research prototype, defining integration points and requirements for both research and production teams.
-* Coordinated discussions and technical decisions during meetings and a business trip, providing teaching sessions and deep-dive walkthroughs to bring the team up to speed.
-* Implemented and optimized an ML-based zero-day phishing detector module in C for Huawei Next-Generation Firewall System-on-Chip devices, including code development, unit testing, and performance benchmarking in a mock production environment, while mentoring an intern assisting with integration and testing.
+* Conducted several weeks of deep code review, debugging, and system analysis to document key components, execution flows, dependencies, and integration points across a complex C-based next-generation firewall (NGFW) system.
+* Acted as the technical point of contact for the research team, answering detailed questions, presenting internal walkthroughs, and clarifying ambiguities with the development team.
+* Leveraged this understanding to design the high-level architecture of a new research prototype, defining integration requirements for both research and production environments.
+* Coordinated technical discussions and decisions during meetings and a business trip, delivering teaching sessions and deep-dive walkthroughs to accelerate team onboarding and alignment.
+* Contributed to the team project of implementing an ML-based zero-day phishing detector module in C for Huawei NGFW System-on-Chip devices, including research, development, unit testing, performance benchmarking in the production environment.
 
 > Primary project 2: Brand Identification Prototype (Python → Hyperscan)
 
 * Led the development of a prototype to identify brands represented or impersonated by benign/phishing webpages, with solo ownership from idea to execution while incorporating team feedback.
-* Built a catalog of structured brand-specific patterns (~200 brands) from multiple webpage components including titles, headers, copyright sections, and metadata.
-* Developed an initial Python prototype using BeautifulSoup and regex to validate the design and KPIs.
+* Built a catalog of structured brand-specific patterns (~200 brands) from multiple webpage components including titles, headers, copyright sections, links, and metadata.
+* Developed multiple iterations of a Python prototype using BeautifulSoup and regex to validate the design and meet KPIs.
 * Redesigned the system for streaming input in a firewall MITM setting, implementing Hyperscan-based incremental pattern matching.
 * Iteratively refined patterns using an internally curated URLScan phishing and benign dataset, achieving approximately 75% recall, 99.5% precision, and 0.3% false positive rate.
-* Delivered the final design after multiple iterations over several months, meeting stakeholder performance targets and integrating with other detection components.
 
 > Primary project 3: Production C Implementation for ASE
 
-* Converted two independent Python prototypes—one content-based and one URL-based—into high-performance C implementations.
+* Converted two independent Python prototypes, one content-based and one URL-based, into high-performance C implementations.
 * Executed both implementations solo under tight sprint deadlines, re-architecting pattern management, removing Python dependencies, and ensuring behavior equivalent to the original prototypes.
-* Optimized for low latency and minimal memory usage (~300 bytes runtime memory, ~0.2 ms per execution).
-* Conducted peer review, static code checks, and Docker-based firewall environment testing, iterating on dev team feedback.
-* Delivered code for integration with ASE, wrote complete technical documentation, and assisted with end-to-end testing on real firewall devices.
+* Optimized for low latency and minimal memory usage (~300 bytes runtime memory, ~0.2 ms per execution), critical for firewall devices.
+* Conducted peer review, static code checks, and Docker-based firewall environment testing, iterating on development team feedback.
+* Delivered code for integration with an Adaptive Security Engine (ASE) product, wrote complete technical documentation, and assisted with end-to-end testing on real firewall devices. Met all stakeholder performance targets.
 
 > Primary project 4: Advanced Evasive Phishing Research (HTML Smuggling)
 
@@ -42,8 +40,7 @@ Working on Next-Generation Firewall Systems in the Applied Networking Technologi
 * Developed a Python-based prototype with a pattern matching engine, multi-stage processing logic, and a sophisticated scoring system to identify HTML smuggling behavior.
 * Designed detection logic to identify characteristic code chains and execution patterns used in real-world HTML smuggling attacks.
 * Conducted research, development, and benchmarking under constrained conditions with limited data and lack of reliable ground truth.
-* Achieved promising early results with high precision, providing reliable identification of HTML smuggling techniques.
-* Led this effort independently while other team members explored parallel evasive phishing vectors. Ongoing work.
+* Achieved promising early results with high precision, providing reliable identification of HTML smuggling techniques. Ongoing work.
 
 > Secondary project: Overall System Design & Mentorship
 
@@ -58,13 +55,14 @@ Working on Next-Generation Firewall Systems in the Applied Networking Technologi
 * Translated the core phishing ML inference pipeline from TensorFlow (Python) and ONNX (C) to the internal Mindspore-based SiteAI/EAI engine, ensuring performance parity across implementations.
 * Optimized data buffering and preprocessing to support streaming input of packets while maintaining low latency.
 * Conducted extensive benchmarking, debugging intermediate tensors, analyzing sample-level outputs, and logging vector states for accuracy verification.
-* Integrated the inference pipeline into the research prototype and handed it to the intern for engineering-level integration into the product pipeline, mentoring throughout.
+* Integrated the inference pipeline into the research prototype and handed it to an intern for engineering-level integration into the product pipeline, mentoring throughout.
 
 > Tertiary projects: Data Analysis & Pipelines
 
 * Conducted analysis on various open-source and internal HTML datasets for benign and phishing sites, producing a conclusive report highlighting patterns for machine learning features used by colleagues.
 * Performed multiple phases of URLScan data analysis to reverse-engineer the "primary request" in network events, developing a heuristic algorithm based on CDP events that correctly predicted the primary request across 2M URLScan samples.
 * Developed a scraper bot for MWC conference demos, using a headless browser to collect CDP events, predict the primary request, and capture metadata/HTML pages for internal analysis and marketing prototype runs.
+* Developed a webpage for live demo at MWC conference which dynamically presents the phishing detection rate of Huawei's product against its competitors.
 * Completed multiple DevOps tasks to support early prototype demos to stakeholders, including HTML page design, simulated phishing attacks, MITM proxy setup, web-scraping bots, pytest infrastructure, and GitLab CI/CD pipelines.
 
 > Other responsibilities
